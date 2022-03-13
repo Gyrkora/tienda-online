@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,WAAW,AAAC,CACR,gBAAgB,CAAE,MAAM,CACxB,WAAW,CAAE,IAAI,CAEpB",
+    "sources": [
+        "Header.scss",
+        "../styles.scss",
+        "../General/variables/variables.scss",
+        "../General/utilities/utilities.scss"
+    ],
+    "names": [],
+    "file": "Header.min.css"
+}

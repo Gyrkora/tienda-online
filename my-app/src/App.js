@@ -1,12 +1,31 @@
-// import logo from './logo.svg';
-import tow from './tow.PNG';
+
 import './App.css';
+import './components/NavBar'
+import { NavBar } from './components/NavBar';
+import { Header } from './components/Header';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={tow} className="App-logo" alt="logo" />
+      <NavBar />   
+      
+      <div><Header /> </div>
+    
+      
+    </div>
+  );
+}
+
+export default App;
+
+
+
+// const style = { backgroundColor: 'brown' }
+
+
+/* <header className="App-header">
+        <img src={tow} className="App-logo" alt="logo" style={ style }/>
         <p>
           Nombre de app: <code>Tienda TOW</code>
         </p>
@@ -19,9 +38,4 @@ function App() {
         >
           Más info
         </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      </header> */

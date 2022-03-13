@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "styles.scss",
+        "General/variables/variables.scss",
+        "General/utilities/utilities.scss"
+    ],
+    "names": [],
+    "file": "styles.min.css"
+}
