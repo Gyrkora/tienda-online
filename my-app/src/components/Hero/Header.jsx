@@ -1,5 +1,4 @@
-import tow  from '../tow.PNG';
-import "../styles/Header/Header.min.css"
+import tow  from '../../tow.PNG';
 
 export const Header = () => {
   return (
