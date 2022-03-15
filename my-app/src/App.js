@@ -3,7 +3,6 @@ import './App.css';
 import './components/NavBar/NavBar'
 import { NavBar } from './components/NavBar/NavBar';
 import { Header } from './components/Hero/Header';
-import { ButtonStyle } from './components/button.style';
 import { GlobalStyles } from './global.style'
 
 
@@ -15,7 +14,6 @@ function App() {
       
       <div><Header /> </div>
     
-      <ButtonStyle buttonLabel={'Click Here'}></ButtonStyle>
     </div>
   );
 }

@@ -11,6 +11,7 @@
 
 
 .App-logo {
+  padding-top: 2rem;
   animation-name: logo-animation;
   animation-duration: 4s;
   animation-iteration-count:infinite;
