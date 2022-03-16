@@ -57,14 +57,16 @@ export const NavbarRLink = styled(Link)`
   margin: 10px;
 `;
 
-export const Logo = styled.h1`
+export const Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
-  font-size: xx-large;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #b1212b;
+  /* color: bisque; */
+  color: #70151B;
+  /* color: #b1212b; */
 `;
 
 export const OpenLinksButton = styled.button`
@@ -95,3 +97,4 @@ export const NavbarExtendedContainer = styled.div`
 
 https://github.com/machadop1407/styled-components-responsive-navbar
 */
+

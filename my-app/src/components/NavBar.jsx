@@ -6,11 +6,12 @@ import {
   NavbarExtendedContainer,
   NavbarLinkContainer,
   NavbarLink,
-  Logo,
   OpenLinksButton,
   NavbarRLink,
-} from "../../styles/NavBar.style";
+  Logo,
+} from "../styles/NavBar.style";
 import { useState } from "react";
+import { Cart } from "./Cart";
 
 export const NavBar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -28,15 +29,19 @@ export const NavBar = () => {
               <NavbarLink to="/Arte">Arte</NavbarLink>
               <OpenLinksButton
                 onClick={() => {
-                  setShowNavbar((current) => !current);/*  el estado se vuelve verdadero */
+                  setShowNavbar(
+                    (current) => !current
+                  ); /*  el estado se vuelve verdadero */
                 }}
               >
-                {showNavbar ? <>&#10005;</> : <>&#8801;</>} 
+                {showNavbar ? <>&#10005;</> : <>&#8801;</>}
               </OpenLinksButton>
             </NavbarLinkContainer>
           </LeftContainer>
           <RightContainer>
-            <Logo>TOW</Logo>
+            <Logo>
+              <Cart />
+            </Logo>
           </RightContainer>
         </NavbarInnerContainer>
 

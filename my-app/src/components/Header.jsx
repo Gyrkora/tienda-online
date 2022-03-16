@@ -1,4 +1,4 @@
-import tow  from '../../tow.PNG';
+import tow  from '../tow.PNG';
 
 export const Header = () => {
   return (
