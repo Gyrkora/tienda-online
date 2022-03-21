@@ -8,6 +8,7 @@ justify-items: center;
 align-items: right;
 grid-column-gap: 1rem;
 grid-row-gap: 1rem;
+padding-bottom: 5rem;
 
 @media (min-width: 768px ) { 
     grid-template-columns: repeat(2, 1fr);
