@@ -6,7 +6,6 @@ export const ItemCountContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* margin: 0 1rem; */
     gap: 1rem;
 
 
