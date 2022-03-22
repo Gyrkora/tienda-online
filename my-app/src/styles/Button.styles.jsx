@@ -2,8 +2,13 @@ import styled from 'styled-components';
 
 export const ButtonStyled = styled.button`
 
-margin-bottom: 1rem;
+margin: 0 0 1rem 0;
 padding: .5rem 2rem;
+background-color: bisque;
+cursor: pointer;
+
+
+
 
 
 

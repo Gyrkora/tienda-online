@@ -11,7 +11,7 @@ import {
   Logo,
 } from "../styles/NavBar.style";
 import { useState } from "react";
-import { Cart } from "./Cart";
+import { CartWidget } from "./CartWidget";
 
 export const NavBar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -40,7 +40,7 @@ export const NavBar = () => {
           </LeftContainer>
           <RightContainer>
             <Logo>
-              <Cart />
+              <CartWidget />
             </Logo>
           </RightContainer>
         </NavbarInnerContainer>
