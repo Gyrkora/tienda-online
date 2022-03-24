@@ -9,6 +9,7 @@ export const ItemCount = ( start, stock, addProduct ) => {
 
   const [count, setCount] = useState(start);
 
+
   const noLess =
     count === start ? (Button.disabled = true) : (Button.disabled = false);
 
