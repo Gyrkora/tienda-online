@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { coursesList } from "../data/data";
+import { ItemSContainer } from "../styles/ItemListContainer.style";
 import { Item } from "./Item";
 
 export const ItemList = () => {
@@ -30,11 +31,12 @@ export const ItemList = () => {
   console.log(coursesList);
 
   return (
-    <div>
+    <ItemSContainer>
       {loading ? (
         <h2>cargando</h2>
       ) : (
         courses.map((course) => (
+
 
             <div key={course.id}>
             <Item
@@ -45,8 +47,9 @@ export const ItemList = () => {
             //   id={course.id}
             />
           </div>
+           
         ))
       )}
-    </div>
+    </ItemSContainer>
   );
 };
