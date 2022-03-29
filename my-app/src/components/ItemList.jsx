@@ -20,15 +20,12 @@ export const ItemList = () => {
     }
   });
 
-  useEffect (() => {
+  useEffect(() => {
     getFetch
-    .then((resp) => setCourses(resp))
-    .catch((err) => console.log(err))
-    .finally(() => setLoading(false), []);
-  })
- 
-
-  console.log(coursesList);
+      .then((resp) => setCourses(resp))
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false), []);
+  });
 
   return (
     <ItemSContainer>
@@ -36,18 +33,13 @@ export const ItemList = () => {
         <h2>cargando</h2>
       ) : (
         courses.map((course) => (
-
-
-            <div key={course.id}>
+          <div key={course.id}>
             <Item
               courseName={course.courseName}
               photo={course.photo}
               price={course.price}
-            //   stock={course.stock}
-            //   id={course.id}
             />
           </div>
-           
         ))
       )}
     </ItemSContainer>

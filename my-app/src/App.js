@@ -8,7 +8,7 @@ import { ItemListContainer } from "./Pages/ItemListContainer";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <GlobalStyles />
         <NavBar />

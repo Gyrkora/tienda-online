@@ -2,20 +2,17 @@ import React, { useState } from "react";
 import { ItemCountContainer } from "../styles/ItemCount.styles";
 import { Button } from "./Button";
 
-export const ItemCount = ( start, stock, addProduct ) => {
-
+export const ItemCount = (start, stock, addProduct) => {
   start = 1;
   stock = 10;
 
   const [count, setCount] = useState(start);
-
 
   const noLess =
     count === start ? (Button.disabled = true) : (Button.disabled = false);
 
   const noMore =
     count === stock ? (Button.disabled = true) : (Button.disabled = false);
-
 
   addProduct = (num) => {
     setCount(count + num);

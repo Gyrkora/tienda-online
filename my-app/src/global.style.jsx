@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
+
 export const GlobalStyles = createGlobalStyle`
 
 body{
@@ -9,5 +10,12 @@ body{
     padding: 0;
     text-align: center;
 
+    cursor: url(tow), auto;	
+
 }
+
+
+
+
 `
+

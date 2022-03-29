@@ -65,7 +65,7 @@ export const Logo = styled.div`
   font-size: 2.5rem;
   font-weight: bold;
   /* color: bisque; */
-  color: #70151B;
+  color: #70151b;
   /* color: #b1212b; */
 `;
 
@@ -97,4 +97,3 @@ export const NavbarExtendedContainer = styled.div`
 
 https://github.com/machadop1407/styled-components-responsive-navbar
 */
-

@@ -1,27 +1,33 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ItemSContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+  column-gap: 10rem;
+  row-gap: 2rem;
 
-display: grid;
-grid-template-columns: 1fr;
-justify-content: center;
-align-items: center;
-/* grid-column-gap: 1rem; */
-/* grid-row-gap: 1rem; */
-padding-bottom: 5rem;
-
-@media (min-width: 768px ) { 
+  /* @media (min-width: 768px ) { 
     grid-template-columns: repeat(2, 1fr);
-    
+   
  }
 
 @media (min-width: 936px ) { 
     grid-template-columns: repeat(3, 1fr); 
-    grid-gap : 1rem;
- } 
-`
+ }  */
 
+  h2 {
+    text-align: center;
+  }
 
-/* --------------- Comentarios necesarios --------------- */
+  h3 {
+    color: tomato;
+    margin: 10px 0;
+  }
 
-/* Cómo poner grid areas con styled components */
+  h4 {
+    font-weight: 600;
+  }
+`;
