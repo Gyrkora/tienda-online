@@ -20,7 +20,7 @@ const coursesList = [
   },
   {
     id: 3,
-    courseName: "Clubes de Conversación",
+    courseName: "Clubes de Conversación - Tertulias TOW",
     photo: tertus,
     description: 'Conoce gente mientras practicas tu español',
     price: "15 USD x session",

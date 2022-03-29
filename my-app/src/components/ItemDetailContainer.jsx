@@ -1,36 +1,28 @@
 import { useState, useEffect } from "react";
-
-import { coursesList } from "../data/data";
 import { ItemDetail } from "./ItemDetail";
+import { getCourses } from "../helpers/getData";
 
-export const ItemDetailContainer = () => {
+export const ItemDetailContainer = ({ id }) => {
   const [courses, setCourses] = useState([]);
 
-  const getCourses = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(coursesList);
-    }, 2000);
-    reject("El curso no está disponible");
-  });
-
-  const getCourseId = (id) =>
-    courses.find((course) => course.id === id);
-
+  
   useEffect(() => {
     getCourses
-      .then((resp) => setCourses(getCourseId(resp.id)), [])
-      .catch((err) => console.log(err));
-});
-
-console.log(courses)
+    .then((resp) => setCourses(getCourseId(id, resp), [id]))
+    .catch((err) => console.log(err));
+    console.log(courses);
+    
+  });
+  
+  const getCourseId = (id, array) => array.find((course) => course.id === id);
 
   return (
-
-
-  <div>
-      { courses ? <ItemDetail item={courses} /> : <h1>'aun no hay productos que mostrar' </h1>  }
-
-  </div>
-  )
-  
+    <div>
+      {courses ? (
+        <ItemDetail item={courses} />
+      ) : (
+        <h1>'aun no hay productos que mostrar' </h1>
+      )}
+    </div>
+  );
 };

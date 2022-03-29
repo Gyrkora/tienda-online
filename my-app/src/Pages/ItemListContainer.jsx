@@ -7,7 +7,7 @@ export const ItemListContainer = () => {
       <h1>Estos son los productos</h1>
       <ItemList />
       
-      <ItemDetailContainer/>
+      <ItemDetailContainer id={1}/>
 
     </div>
   );

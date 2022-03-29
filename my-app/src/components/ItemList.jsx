@@ -1,27 +1,16 @@
 /* Acá se llamará a la API y se renderizarán los "items" a través del map */
 
 import { useState, useEffect } from "react";
-import { coursesList } from "../data/data";
 import { ItemSContainer } from "../styles/ItemListContainer.style";
 import { Item } from "./Item";
+import { getCourses } from "../helpers/getData";
 
 export const ItemList = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const getFetch = new Promise((resolve, reject) => {
-    let condition = true;
-    if (condition) {
-      setTimeout(() => {
-        resolve(coursesList);
-      }, 3000);
-    } else {
-      reject("Los cursos no están disponibles");
-    }
-  });
-
   useEffect(() => {
-    getFetch
+    getCourses
       .then((resp) => setCourses(resp))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false), []);
