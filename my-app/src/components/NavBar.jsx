@@ -23,15 +23,15 @@ export const NavBar = () => {
           <LeftContainer>
             <NavbarLinkContainer>
               <NavbarLink to="/">Inicio</NavbarLink>
-              <NavbarLink to="/Cursos">Cursos</NavbarLink>
-              <NavbarLink to="/Audiolibros">Audiolibros</NavbarLink>
-              <NavbarLink to="/Libros">Libros</NavbarLink>
-              <NavbarLink to="/Arte">Arte</NavbarLink>
+              <NavbarLink to="/categoria/Cursos">Cursos</NavbarLink>
+              <NavbarLink to="/categoria/Audiolibros">Audiolibros</NavbarLink>
+              {/* <NavbarLink to="/categoria/Libros">Libros</NavbarLink> */}
+              {/* <NavbarLink to="/categoria/Arte">Arte</NavbarLink> */}
               <OpenLinksButton
                 onClick={() => {
                   setShowNavbar(
                     (current) => !current
-                  ); /*  el estado se vuelve verdadero */
+                  ); /* el estado se vuelve verdadero */
                 }}
               >
                 {showNavbar ? <>&#10005;</> : <>&#8801;</>}
@@ -50,8 +50,8 @@ export const NavBar = () => {
             <NavbarRLink to="/">Inicio</NavbarRLink>
             <NavbarRLink to="/Cursos">Cursos</NavbarRLink>
             <NavbarRLink to="/Audiolibros">Audiolibros</NavbarRLink>
-            <NavbarRLink to="/Libros">Libros</NavbarRLink>
-            <NavbarRLink to="/Arte">Arte</NavbarRLink>
+            {/* <NavbarRLink to="/Libros">Libros</NavbarRLink> */}
+            {/* <NavbarRLink to="/Arte">Arte</NavbarRLink> */}
           </NavbarExtendedContainer>
         )}
       </NavbarContainer>
@@ -59,8 +59,4 @@ export const NavBar = () => {
   );
 };
 
-// function Button( { className, buttonLabel }) {
-//   return (
-//     <button className={className}>{buttonLabel}</button>
-//   )
-// }
+

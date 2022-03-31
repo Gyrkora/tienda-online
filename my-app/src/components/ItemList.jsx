@@ -4,29 +4,38 @@ import { useState, useEffect } from "react";
 import { ItemSContainer } from "../styles/ItemListContainer.style";
 import { Item } from "./Item";
 import { getCourses } from "../helpers/getData";
+import { useParams } from "react-router-dom";
+// import { coursesList } from "../data/data";
 
 export const ItemList = () => {
-  const [courses, setCourses] = useState([]);
+  const [categoryCourses, setCategoryCourses] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const { categoriaId } = useParams();
+
+  console.log(categoriaId);
 
   useEffect(() => {
     getCourses
-      .then((resp) => setCourses(resp))
+      .then((resp) =>setCategoryCourses(resp.filter( (curso) => curso.category === categoriaId)) )
       .catch((err) => console.log(err))
-      .finally(() => setLoading(false), []);
-  });
+      .finally(() => setLoading(false));
+  }, [categoriaId]);
+
+  //.filter( (curso) => curso.category === categoriaId)
 
   return (
     <ItemSContainer>
       {loading ? (
         <h2>cargando</h2>
       ) : (
-        courses.map((course) => (
+        categoryCourses.map((course) => (
           <div key={course.id}>
             <Item
               courseName={course.courseName}
               photo={course.photo}
               price={course.price}
+              id={course.id}
             />
           </div>
         ))

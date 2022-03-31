@@ -1,7 +1,7 @@
 import { DetailContainer } from "../styles/ItemDetail.styles";
 import { ItemCount } from "./ItemCount";
 
-export const ItemDetail = ({ item }) => {
+export const ItemDetail = ({ item, id }) => {
   return (
     <DetailContainer>
       <img src={item.photo} alt={item.courseName} />
@@ -13,3 +13,4 @@ export const ItemDetail = ({ item }) => {
     </DetailContainer>
   );
 };
+

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const NavbarContainer = styled.nav`
   width: 100%;
@@ -37,7 +37,7 @@ export const NavbarLinkContainer = styled.div`
   display: flex;
 `;
 
-export const NavbarLink = styled(Link)`
+export const NavbarLink = styled(NavLink)`
   color: white;
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;

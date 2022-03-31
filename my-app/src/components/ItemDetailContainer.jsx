@@ -10,7 +10,6 @@ export const ItemDetailContainer = ({ id }) => {
     getCourses
     .then((resp) => setCourses(getCourseId(id, resp), [id]))
     .catch((err) => console.log(err));
-    console.log(courses);
     
   });
   
@@ -19,10 +18,11 @@ export const ItemDetailContainer = ({ id }) => {
   return (
     <div>
       {courses ? (
-        <ItemDetail item={courses} />
+        <ItemDetail item={courses}/>
       ) : (
         <h1>'aun no hay productos que mostrar' </h1>
       )}
     </div>
   );
 };
+
