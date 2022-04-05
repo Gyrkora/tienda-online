@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 const ButtonSwitched = () => {
   return (
-    <ButtonSwitchedContainer>
+    // <ButtonSwitchedContainer>
+    <div>
       <Link to="/cart">
         <ButtonStyled onClick={() => console.log("ir a cart")}>
           Terminar compra
@@ -16,7 +17,8 @@ const ButtonSwitched = () => {
           Seguir comprando
         </ButtonStyled>
       </Link>
-    </ButtonSwitchedContainer>
+      </div>
+    // </ButtonSwitchedContainer>
   );
 };
 
