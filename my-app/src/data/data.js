@@ -21,11 +21,12 @@ const coursesList = [
     photo: redTOW,
     description: 'Aprende a escribir en español con este curso de redacción basado en la cultura latinoamericana',
     price: "60 USD x month",
-    category: 'Cursos'
+    category: 'Cursos',
+    algo: 'algo'
   },
   {
     id: '3',
-    courseName: "Clubes de Conversación - Tertulias TOW",
+    courseName: "Clubes de Conversación",
     photo: tertus,
     description: 'Conoce gente mientras practicas tu español',
     price: "15 USD x session",

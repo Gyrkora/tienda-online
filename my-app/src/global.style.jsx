@@ -15,8 +15,6 @@ body{
 }
 
 img {
-    height: 15rem;
-    width: 17rem;
     border-radius: 1rem;
 }
 

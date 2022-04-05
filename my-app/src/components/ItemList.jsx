@@ -5,7 +5,6 @@ import { ItemSContainer } from "../styles/ItemListContainer.style";
 import { Item } from "./Item";
 import { getCourses } from "../helpers/getData";
 import { useParams } from "react-router-dom";
-// import { coursesList } from "../data/data";
 
 export const ItemList = () => {
   const [categoryCourses, setCategoryCourses] = useState([]);
@@ -13,7 +12,6 @@ export const ItemList = () => {
 
   const { categoriaId } = useParams();
 
-  console.log(categoriaId);
 
   useEffect(() => {
     getCourses
@@ -22,7 +20,6 @@ export const ItemList = () => {
       .finally(() => setLoading(false));
   }, [categoriaId]);
 
-  //.filter( (curso) => curso.category === categoriaId)
 
   return (
     <ItemSContainer>

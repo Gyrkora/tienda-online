@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ItemCountContainer } from "../styles/ItemCount.styles";
-import { Button } from "./Button";
+import ButtonDetail from "./ButtonDetail";
 
 export const ItemCount = (start, stock, addProduct) => {
   start = 1;
@@ -9,10 +9,10 @@ export const ItemCount = (start, stock, addProduct) => {
   const [count, setCount] = useState(start);
 
   const noLess =
-    count === start ? (Button.disabled = true) : (Button.disabled = false);
+    count === start ? (ButtonDetail.disabled = true) : (ButtonDetail.disabled = false);
 
-  const noMore =
-    count === stock ? (Button.disabled = true) : (Button.disabled = false);
+ const noMore =
+    count === stock ? (ButtonDetail.disabled = true) : (ButtonDetail.disabled = false);
 
   addProduct = (num) => {
     setCount(count + num);
@@ -30,9 +30,9 @@ export const ItemCount = (start, stock, addProduct) => {
         </button>
       </ItemCountContainer>
 
-      <div>
-        <Button noMore={noMore} />
-      </div>
+      {/* <div>
+        <ButtonDetail noMore={noMore} />
+      </div> */}
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { GlobalStyles } from "./global.style";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DetailPage from "./Pages/DetailPage";
 import { ItemList } from "./components/ItemList";
+import { Cart } from "./components/Cart";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Header />} />
           <Route path="/categoria/:categoriaId" element={<ItemList />} />
+          <Route path="/cart" element={<Cart />} />
           
           <Route path="/detalle/:detalleId" element={<DetailPage />}  />
         </Routes>

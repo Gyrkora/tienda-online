@@ -6,3 +6,17 @@ export const ButtonStyled = styled.button`
   background-color: bisque;
   cursor: pointer;
 `;
+
+export const ButtonSwitchedContainer = styled.div`
+  
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+
+
+
+`

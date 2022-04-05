@@ -8,6 +8,7 @@ export const NavbarContainer = styled.nav`
   display: flex;
   flex-direction: column;
   transition: all 0.7s ease-in-out;
+  margin-bottom: 1rem;
 
   @media (min-width: 700px) {
     height: 80px;

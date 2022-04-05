@@ -11,12 +11,3 @@ export const Header = () => {
   );
 };
 
-
-
-/* 
-
-.module {
-  cursor: url('./TOW.png'), auto;	
-}
-
-*/

@@ -30,4 +30,12 @@ export const ItemSContainer = styled.div`
   h4 {
     font-weight: 600;
   }
+
+  img {
+    height: 15rem;
+    width: 17rem;
+    border-radius: 1rem;
+}
+
+
 `;
