@@ -48,8 +48,8 @@ export const NavBar = () => {
         {showNavbar && (
           <NavbarExtendedContainer>
             <NavbarRLink to="/">Inicio</NavbarRLink>
-            <NavbarRLink to="/Cursos">Cursos</NavbarRLink>
-            <NavbarRLink to="/Audiolibros">Audiolibros</NavbarRLink>
+            <NavbarRLink to="/categoria/Cursos">Cursos</NavbarRLink>
+            <NavbarRLink to="/categoria/Audiolibros">Audiolibros</NavbarRLink>
             {/* <NavbarRLink to="/Libros">Libros</NavbarRLink> */}
             {/* <NavbarRLink to="/Arte">Arte</NavbarRLink> */}
           </NavbarExtendedContainer>

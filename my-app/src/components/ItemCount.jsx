@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { ItemCountContainer } from "../styles/ItemCount.styles";
 import ButtonDetail from "./ButtonDetail";
 
-export const ItemCount = (start, stock, addProduct) => {
-  start = 1;
-  stock = 10;
+export const ItemCount = ({start, stock, onAdd}) => {
+ 
 
   const [count, setCount] = useState(start);
 
@@ -14,8 +13,8 @@ export const ItemCount = (start, stock, addProduct) => {
  const noMore =
     count === stock ? (ButtonDetail.disabled = true) : (ButtonDetail.disabled = false);
 
-  addProduct = (num) => {
-    setCount(count + num);
+  const addProduct = (num) => {
+    setCount(count + num);//count va a ser el valor de onAdd()
   };
 
   return (
@@ -30,9 +29,9 @@ export const ItemCount = (start, stock, addProduct) => {
         </button>
       </ItemCountContainer>
 
-      {/* <div>
-        <ButtonDetail noMore={noMore} />
-      </div> */}
+      <div>
+        <ButtonDetail noMore={noMore} onAdd={onAdd} count={count} />
+      </div>
     </div>
   );
 };

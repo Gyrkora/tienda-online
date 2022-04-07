@@ -1,14 +1,18 @@
 import { useParams } from "react-router-dom";
 import { ItemDetailContainer } from "../components/ItemDetailContainer";
+// import { DetailContainer } from "../styles/ItemDetail.styles";
 
 const DetailPage = () => {
   let { detalleId } = useParams();
 
   return (
-    <div>
+    // <DetailContainer>
+      <div>
       <h1> Este es el detalle del curso</h1>
       <ItemDetailContainer id={detalleId} />
-    </div>
+
+      </div>
+    // </DetailContainer>
   );
 };
 

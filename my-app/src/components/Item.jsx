@@ -17,7 +17,7 @@ export const Item = ({ courseName, price, photo, id }) => {
       <h4>{price}</h4>
 
       <ItemCount />
-      <ButtonStyled > Agregar</ButtonStyled>
+      <ButtonStyled >Agregar</ButtonStyled>
     </div>
   );
 };

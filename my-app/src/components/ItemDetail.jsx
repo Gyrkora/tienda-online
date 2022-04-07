@@ -5,9 +5,13 @@ import {
   DetailContainerRight,
 } from "../styles/ItemDetail.styles";
 import { ItemCount } from "./ItemCount";
-import ButtonDetail from './ButtonDetail'
 
 export const ItemDetail = ({ item }) => {
+
+  const onAdd = (count) => {
+    console.log(count);;
+  };
+
   return (
     <DetailContainer>
       <DetailContainerInner>
@@ -20,8 +24,7 @@ export const ItemDetail = ({ item }) => {
           <h3> {item.description} </h3>
           <h3> Precio </h3>
           <h4> {item.price} </h4>
-          <ItemCount />
-          <ButtonDetail/>
+          <ItemCount stock={item.stock} start={1} onAdd={onAdd}/>
           
         </DetailContainerRight>
       </DetailContainerInner>

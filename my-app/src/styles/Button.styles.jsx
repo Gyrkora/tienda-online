@@ -7,16 +7,16 @@ export const ButtonStyled = styled.button`
   cursor: pointer;
 `;
 
-export const ButtonSwitchedContainer = styled.div`
+export const ButtonSwitchedContain = styled.div`
   
 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  column-gap: 3rem;
   margin-top: 2rem;
 
 
 
-`
+`;

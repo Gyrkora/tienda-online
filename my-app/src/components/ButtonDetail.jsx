@@ -1,11 +1,11 @@
-import { ButtonStyled, ButtonSwitchedContainer } from "../styles/Button.styles";
+import { ButtonStyled, ButtonSwitchedContain } from "../styles/Button.styles";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ButtonSwitched = () => {
   return (
-    // <ButtonSwitchedContainer>
-    <div>
+    <ButtonSwitchedContain>
+    {/* <div> */}
       <Link to="/cart">
         <ButtonStyled onClick={() => console.log("ir a cart")}>
           Terminar compra
@@ -17,18 +17,19 @@ const ButtonSwitched = () => {
           Seguir comprando
         </ButtonStyled>
       </Link>
-      </div>
-    // </ButtonSwitchedContainer>
+       {/* </div> */}
+    </ButtonSwitchedContain>
   );
 };
 
 
 
 
-const ButtonDetail = ({ noMore }) => {
+const ButtonDetail = ({ noMore, onAdd, count }) => {
   const [ButtonType, setButtonType] = useState(true);
 
   const handleInter = () => {
+    onAdd(count)
     setButtonType(false);
   };
 

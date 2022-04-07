@@ -13,7 +13,8 @@ const coursesList = [
     photo: clasesDeEspanol,
     description: 'Clases de español personalizadas a su nivel, intereses y cultura',
     price: "30 USD x 1hr",
-    category: 'Cursos'
+    category: 'Cursos',
+    stock: 50
   },
   {
     id: '2',
@@ -22,7 +23,8 @@ const coursesList = [
     description: 'Aprende a escribir en español con este curso de redacción basado en la cultura latinoamericana',
     price: "60 USD x month",
     category: 'Cursos',
-    algo: 'algo'
+    stock: 30
+
   },
   {
     id: '3',
@@ -30,7 +32,9 @@ const coursesList = [
     photo: tertus,
     description: 'Conoce gente mientras practicas tu español',
     price: "15 USD x session",
-    category: 'Cursos'
+    category: 'Cursos',
+    stock: 20,
+
   },
   {
     id: '4',
@@ -38,7 +42,8 @@ const coursesList = [
     photo: elArbolYLaPlanta,
     description: 'Descubre por qué es importante dejar crecer al árbol como es.',
     price: "15 USD",
-    category: 'Audiolibros'
+    category: 'Audiolibros',
+    stock: 100
 
   },
   {
@@ -47,7 +52,9 @@ const coursesList = [
     photo: elRegreso,
     description: 'Sofia se reencuentra con sus tierras luego de un viaje al otro continente.',
     price: "10 USD",
-    category: 'Audiolibros'
+    category: 'Audiolibros',
+    stock: 100
+
   },
   {
     id: '6',
@@ -55,7 +62,8 @@ const coursesList = [
     photo: menique,
     description: 'El más pequeño de todos los hermanos va a darle una sorpresa al mundo',
     price: "30 USD",
-    category: 'Audiolibros'
+    category: 'Audiolibros',
+    stock: 100
   }
 ];
 
