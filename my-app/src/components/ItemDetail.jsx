@@ -5,12 +5,9 @@ import {
   DetailContainerRight,
 } from "../styles/ItemDetail.styles";
 import { ItemCount } from "./ItemCount";
+import { onAdd } from "../helpers/functions";
 
 export const ItemDetail = ({ item }) => {
-
-  const onAdd = (count) => {
-    console.log(count);;
-  };
 
   return (
     <DetailContainer>
