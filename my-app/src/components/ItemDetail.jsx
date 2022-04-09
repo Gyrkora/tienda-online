@@ -12,11 +12,10 @@ export const ItemDetail = ({ item }) => {
 
 const { addToCart, cartList } = useCartContext()
 
-  const onAdd = (count) => {
+  const onAdd =  (count) => {
     console.log(count)
-    addToCart( { ...item, amount: count } )
+    addToCart( { ...item, amount: count }, count )
   };
-
 
   console.log(cartList);
 
