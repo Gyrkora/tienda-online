@@ -15,7 +15,7 @@ export const CartContextProvider = ({children}) => {
                     //sumando la cuenta a la cantidad
                     let index = cartList.findIndex(one => one.id === item.id) //si hay un id igual dentro de cartList
                     let product = cartList[index]
-                    product.amount = item.amount + count;
+                    product.amount = product.amount + count;
 
         
                     //eliminar del carrito

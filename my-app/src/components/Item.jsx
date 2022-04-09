@@ -2,8 +2,6 @@
 
 import { Link } from "react-router-dom";
 import { ButtonStyled } from "../styles/Button.styles";
-import { ItemCount } from "./ItemCount";
-import { onAdd } from "../helpers/functions";
 
 
 
@@ -19,8 +17,9 @@ export const Item = ({ courseName, price, photo, id, stock }) => {
       </Link>
       <h4>{price}</h4>
 
-      <ItemCount stock={stock} start={1} onAdd={onAdd}/>
-      <ButtonStyled >Agregar</ButtonStyled>
+    <Link to={`/detalle/${id}`}>
+      <ButtonStyled >Ver más</ButtonStyled>
+    </Link>
     </div>
   );
 };
