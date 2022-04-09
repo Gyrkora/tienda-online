@@ -3,11 +3,13 @@
 import { Link } from "react-router-dom";
 import { ButtonStyled } from "../styles/Button.styles";
 import { ItemCount } from "./ItemCount";
-// import {noMore} from './ItemCount'
 
 
 
 export const Item = ({ courseName, price, photo, id }) => {
+  
+
+
   return (
     <div>
       <img src={photo} alt={courseName} />

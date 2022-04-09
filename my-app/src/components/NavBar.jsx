@@ -12,6 +12,7 @@ import {
 } from "../styles/NavBar.style";
 import { useState } from "react";
 import { CartWidget } from "./CartWidget";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -40,7 +41,9 @@ export const NavBar = () => {
           </LeftContainer>
           <RightContainer>
             <Logo>
+              <Link to='./cart'>
               <CartWidget />
+              </Link>
             </Logo>
           </RightContainer>
         </NavbarInnerContainer>
