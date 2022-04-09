@@ -33,6 +33,7 @@ export const ItemList = () => {
               photo={course.photo}
               price={course.price}
               id={course.id}
+              stock={course.stock}
             />
           </div>
         ))
