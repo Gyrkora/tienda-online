@@ -5,9 +5,19 @@ import {
   DetailContainerRight,
 } from "../styles/ItemDetail.styles";
 import { ItemCount } from "./ItemCount";
-import { onAdd } from "../helpers/functions";
+import { useCartContext } from "../context/CartContext";
+
 
 export const ItemDetail = ({ item }) => {
+
+const { addToCart, cartList } = useCartContext()
+
+  const onAdd =  (count) => {
+    console.log(count)
+    addToCart( { ...item, amount: count }, count )
+  };
+
+  console.log(cartList);
 
   return (
     <DetailContainer>
