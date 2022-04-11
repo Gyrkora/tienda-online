@@ -7,7 +7,10 @@ const element = <FontAwesomeIcon icon={faCartPlus} />;
 
 export const CartWidget = () => {
 
+  
   const { cartList } = useCartContext();
+  console.log(cartList.amount)
 
-  return <div><p>{element}{cartList.length}</p></div>;
+  return <div><p>{element}{cartList.amount}</p></div>
+
 };

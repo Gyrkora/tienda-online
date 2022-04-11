@@ -46,31 +46,9 @@ export const CartContextProvider = ({children}) => {
 
     const removeCart = () => {
         setCartList( [] )
+        
     }
 
-
-
-    // const addToCart = (item, amount) => {
-    //     if(cartList.some(one => one.id === item.id)){
-            
-    //         let index = cart.findIndex(el => el.id === item.id);
-    //         let product = cartList[index];
-    //         product.amount = product.amount + amount;
-
-    //         const newCart = [...cartList];
-    //         newCart.splice( index, 1, product );
-
-    //         setCartList([ ...newCart ]);
-
-    //     }else{
-            // let product = {...item, qty};
-    //          setCartList([
-            // ...cartList,
-            // item
-    //     }
-    // }
-
-    //https://stackblitz.com/edit/react-6ymjfz?file=src%2Fcontext%2FCartContext.js
 
 
 
