@@ -12,12 +12,11 @@ export const ItemDetailContainer = ({ id }) => {
     .then((resp) => setCourses(getCourseId(id, resp), [id]))
     .catch((err) => console.log(err))
     .finally(() => setLoading(false))
-    
   });
   
   const getCourseId = (id, array) => array.find((course) => course.id === id);
 
-  
+
 
   return (
     <div>

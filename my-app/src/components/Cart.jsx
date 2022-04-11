@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 
 export const Cart = () => {
-  const { cartList, removeCart } = useCartContext();
+  const { cartList, removeCart, removeByItem } = useCartContext();
 
   return (
     <div>
@@ -13,6 +13,8 @@ export const Cart = () => {
               <h1> {item.courseName} </h1>
               <img src={item.photo} alt={item.courseName} />
               <h2> Cantidad: {item.amount} </h2>
+              <button onClick={() => removeByItem(item.id)}>&#10005;</button>
+              
             </div>
           </div>
         );

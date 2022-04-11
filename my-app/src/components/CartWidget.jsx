@@ -9,8 +9,8 @@ export const CartWidget = () => {
 
   
   const { cartList } = useCartContext();
-  console.log(cartList.amount)
+  // console.log(cartList[0].amount  + cartList[1].amount)
 
-  return <div><p>{element}{cartList.amount}</p></div>
+  return <div><p>{element}{cartList.length}</p></div>
 
 };

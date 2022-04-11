@@ -50,13 +50,26 @@ export const CartContextProvider = ({children}) => {
     }
 
 
+    const removeByItem = (cartItemId) => {
+
+
+        const newCart = [...cartList]
+        let index = cartList.findIndex(one => one.id === cartItemId)
+
+        newCart.splice( index, 1);
+        setCartList([...newCart]);
+
+    }
+
+
 
 
     return (
         <CartContext.Provider value={{
             cartList,
             addToCart,
-            removeCart
+            removeCart,
+            removeByItem
         }}>
             {children}                                
         </CartContext.Provider>
