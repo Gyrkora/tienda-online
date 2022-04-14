@@ -18,6 +18,9 @@ img {
     border-radius: 1rem;
 }
 
+a {
+    text-decoration: none;
+}
 
 `
 

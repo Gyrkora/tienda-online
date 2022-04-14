@@ -1,20 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { useCartContext } from "../context/CartContext";
+import { CartWidgetDisabled, CartWidgetAbled } from "../styles/CartWidget.styles";
 
 
 const element = <FontAwesomeIcon icon={faCartPlus} />;
 
 export const CartWidget = () => {
-
   
-  const { cartList } = useCartContext();
+  const { cartList, totalItems } = useCartContext();
 
-  // console.log(cartList[0].amount  + cartList[1].amount)
-
-  // const totalPrice = cartList.reduce((a, c) => a + c.amount * c.price, 0);
-
-
-  return <div><p>{element}{cartList.length}</p></div>
-
+  return  (
+  <div>
+    {cartList.length === 0 && <CartWidgetDisabled><p>{element}</p></CartWidgetDisabled>}
+    {cartList.length !== 0 && <CartWidgetAbled><p>{element}{totalItems}</p></CartWidgetAbled>}
+  </div>)
 };

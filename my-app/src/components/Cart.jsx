@@ -2,10 +2,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 
 export const Cart = () => {
-  const { cartList, removeCart, removeByItem } = useCartContext();
-
-  // const totalPrice = cartList.reduce((a, c) => a + c.amount * c.priceInDollars, 0);
-
+  const { cartList, removeCart, removeByItem, totalPrice } = useCartContext();
 
   return (
     <div>
@@ -16,7 +13,7 @@ export const Cart = () => {
               <h1> {item.courseName} </h1>
               <img src={item.photo} alt={item.courseName} />
               <h2> Cantidad: {item.amount} </h2>
-              <h4>{(item.amount * item.priceInDollars) + ' USD'}</h4>
+              <h4> Precio: {(item.amount * item.priceInDollars) + ' USD'}</h4>
               <button onClick={() => removeByItem(item.id)}>&#10005;</button>
               
             </div>
@@ -27,7 +24,7 @@ export const Cart = () => {
       {cartList.length ? (
         <div>
           <button onClick={removeCart}>Vaciar Carrito</button>
-          {/* <h3>{totalPrice}</h3> */}
+          <h3> Precio Total: {totalPrice}</h3>
 
         </div>
       ) : (
