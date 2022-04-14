@@ -4,6 +4,8 @@ import { useCartContext } from "../context/CartContext";
 export const Cart = () => {
   const { cartList, removeCart, removeByItem } = useCartContext();
 
+  
+
   return (
     <div>
       {cartList.map((item) => {
@@ -13,6 +15,7 @@ export const Cart = () => {
               <h1> {item.courseName} </h1>
               <img src={item.photo} alt={item.courseName} />
               <h2> Cantidad: {item.amount} </h2>
+              <h4>{(item.amount * item.priceInDollars) + ' USD'}</h4>
               <button onClick={() => removeByItem(item.id)}>&#10005;</button>
               
             </div>

@@ -31,6 +31,7 @@ const { addToCart, cartList } = useCartContext()
           <h3> {item.description} </h3>
           <h3> Precio </h3>
           <h4> {item.price} </h4>
+          
           <ItemCount stock={item.stock} start={1} onAdd={onAdd}/>
           
         </DetailContainerRight>
