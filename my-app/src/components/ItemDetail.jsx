@@ -7,17 +7,13 @@ import {
 import { ItemCount } from "./ItemCount";
 import { useCartContext } from "../context/CartContext";
 
-
 export const ItemDetail = ({ item }) => {
+  const { addToCart, cartList } = useCartContext();
 
-const { addToCart, cartList } = useCartContext()
-
-  const onAdd =  (count) => {
-    console.log(count)
-    addToCart( { ...item, amount: count }, count )
+  const onAdd = (count) => {
+    console.log(count);
+    addToCart({ ...item, amount: count }, count);
   };
-
-  console.log(cartList);
 
   return (
     <DetailContainer>
@@ -31,13 +27,10 @@ const { addToCart, cartList } = useCartContext()
           <h3> {item.description} </h3>
           <h3> Precio </h3>
           <h4> {item.price} </h4>
-          
-          <ItemCount stock={item.stock} start={1} onAdd={onAdd}/>
-          
+
+          <ItemCount stock={item.stock} start={1} onAdd={onAdd} />
         </DetailContainerRight>
       </DetailContainerInner>
     </DetailContainer>
   );
 };
-
-
