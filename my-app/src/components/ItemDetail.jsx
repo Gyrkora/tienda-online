@@ -6,9 +6,16 @@ import {
 } from "../styles/ItemDetail.styles";
 import { ItemCount } from "./ItemCount";
 import { useCartContext } from "../context/CartContext";
+// import { getStorage, ref } from "firebase/storage";
+
+// // Create a root reference
+// const storage = getStorage();
+
+// // Create a reference to 'mountains.jpg'
+// const menique = ref(storage, 'meniqueAL.jpg');
 
 export const ItemDetail = ({ item }) => {
-  const { addToCart, cartList } = useCartContext();
+  const { addToCart } = useCartContext();
 
   const onAdd = (count) => {
     console.log(count);
