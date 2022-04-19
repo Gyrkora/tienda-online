@@ -5,6 +5,10 @@ import { CartItem } from "./CartItem";
 export const Cart = () => {
   const { cartList, removeCart, removeByItem, totalPrice } = useCartContext();
 
+  const generarOrden = () => {
+    console.log("generando orden");
+  };
+
   return (
     <div>
       {cartList.map((item) => {
@@ -24,6 +28,7 @@ export const Cart = () => {
           <Link to="/">
             <button>Seguí comprando</button>
           </Link>
+          <button onClick={generarOrden}>Generar orden</button>
         </div>
       )}
     </div>
