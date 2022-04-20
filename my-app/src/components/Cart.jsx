@@ -15,7 +15,6 @@ import { useState } from 'react'
 
 export const Cart = () => {
 	const { cartList, removeCart, removeByItem, totalPrice } = useCartContext()
-	// let ordenId = ''
 	const [ordenID, setOrdenID] = useState('')
 
 	const generarOrden = async (e) => {
@@ -24,9 +23,9 @@ export const Cart = () => {
 		let orden = {}
 
 		orden.buyer = {
-			firstName: 'Federico',
-			email: 'f@gmail.com',
-			phone: '023456987',
+			firstName: 'Gyrkora',
+			email: 'Gy@gmail.com',
+			phone: '1194054346',
 		}
 
 		orden.total = totalPrice
@@ -43,12 +42,11 @@ export const Cart = () => {
 		const db = getFirestore() //se consigue el storage
 		const queryCollection = collection(db, 'orders') //se crea la colección
 		await addDoc(queryCollection, orden) //agregar el archivo orden a orders //promise
-			// .then(({ id }) => console.log(id))
 			.then(({ id }) => setOrdenID(id))
 
 			.finally(removeCart())
 
-		//# actualizar el stock
+		//# actualizando el stock
 
 		const queryCollectionStock = collection(db, 'cursos')
 
@@ -58,7 +56,7 @@ export const Cart = () => {
 			where(
 				documentId(),
 				'in',
-				cartList.map((it) => it.id) // todos los id's que estén... se va a crear un array = ["jlksjfdgl","asljdfks'] => ejemplo del map
+				cartList.map((it) => it.id) // all los id's que estén... se va a crear un array = ["jlksjfdgl","asljdfks'] => ejemplo del map
 			)
 		)
 
