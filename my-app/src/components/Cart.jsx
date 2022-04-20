@@ -4,19 +4,19 @@ import { CartItem } from './CartItem'
 import {
 	addDoc,
 	collection,
-	doc,
 	documentId,
-	getDoc,
 	getDocs,
 	getFirestore,
 	query,
-	updateDoc,
 	where,
 	writeBatch,
 } from 'firebase/firestore'
+import { useState } from 'react'
 
 export const Cart = () => {
 	const { cartList, removeCart, removeByItem, totalPrice } = useCartContext()
+	// let ordenId = ''
+	const [ordenID, setOrdenID] = useState('')
 
 	const generarOrden = async (e) => {
 		e.preventDefault()
@@ -43,14 +43,13 @@ export const Cart = () => {
 		const db = getFirestore() //se consigue el storage
 		const queryCollection = collection(db, 'orders') //se crea la colección
 		await addDoc(queryCollection, orden) //agregar el archivo orden a orders //promise
-			.then(({ id }) => console.log(id))
-			.finally(removeCart())
+			// .then(({ id }) => console.log(id))
+			.then(({ id }) => setOrdenID(id))
 
-		//  const ordenId =
+			.finally(removeCart())
 
 		//# actualizar el stock
 
-		//const query Collection
 		const queryCollectionStock = collection(db, 'cursos')
 
 		const queryActulizarStock = await query(
@@ -104,6 +103,7 @@ export const Cart = () => {
 			)}
 
 			<button onClick={generarOrden}>Generar orden</button>
+			<h2>Su número de compra es el siguiente: {ordenID}</h2>
 		</div>
 	)
 }
