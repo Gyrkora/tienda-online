@@ -1,20 +1,14 @@
 // import tow from '../tow.PNG'
 import araucaria from '../assets/araucaria22.svg'
-import { Audiolibros } from './Audiolibros'
-import { Cursos } from './Cursos'
+import { HeaderContainer } from '../styles/Header.styles'
 
 export const Header = () => {
 	return (
 		<div>
-			<header>
-				<h1> Este es el Inicio </h1>
+			<HeaderContainer>
+				<h1> Tienda The Other Way Spanish </h1>
 				<img src={araucaria} className="App-logo" alt="logo" />
-			</header>
-
-			<h2>Sugeridos para ti</h2>
-			<Cursos />
-			<h2>Audiolibros</h2>
-			<Audiolibros />
+			</HeaderContainer>
 		</div>
 	)
 }

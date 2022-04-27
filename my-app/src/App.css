@@ -7,6 +7,10 @@
 	height: 70vmin;
 	pointer-events: none;
 }
+.App-logoFooter {
+	height: 15vmin;
+	pointer-events: none;
+}
 
 .App-logo {
 	/* padding-top: 2rem; */

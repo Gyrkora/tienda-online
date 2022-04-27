@@ -8,6 +8,8 @@ import DetailPage from './Pages/DetailPage'
 import { ItemList } from './components/ItemList'
 import { Cart } from './components/Cart'
 import { CartContextProvider } from './context/CartContext'
+import { Footer } from './components/Footer'
+import { HomePage } from './Pages/HomePage'
 
 function App() {
 	return (
@@ -18,13 +20,15 @@ function App() {
 					<GlobalStyles />
 
 					<Routes>
-						<Route path="/" element={<Header />} />
+						<Route path="/" element={<HomePage />} />
 						<Route path="/categoria/:categoriaId" element={<ItemList />} />
 						<Route path="/" element={<ItemList />} />
 						<Route path="/cart" element={<Cart />} />
 
 						<Route path="/detalle/:detalleId" element={<DetailPage />} />
 					</Routes>
+
+					<Footer />
 				</CartContextProvider>
 			</Router>
 		</div>

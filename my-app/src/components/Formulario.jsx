@@ -1,8 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useState } from 'react'
-import { Cart } from './Cart'
 
-export const Formulario = ({ ordenID }) => {
+export const Formulario = () => {
 	const [sendFormulario, setSendFormulario] = useState(false)
 
 	return (

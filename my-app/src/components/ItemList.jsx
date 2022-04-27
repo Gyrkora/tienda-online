@@ -38,7 +38,7 @@ export const ItemList = () => {
 
 	return (
 		<ItemListTotalContainer>
-			<h1>Esta es la categoria {categoriaId}</h1>
+			<h1>{categoriaId}</h1>
 			<ItemSContainer>
 				{loading ? (
 					<h2>cargando</h2>

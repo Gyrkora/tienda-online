@@ -5,7 +5,7 @@ export const DetailContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: auto 1rem;
+	margin: 5rem 1rem;
 `
 
 export const DetailContainerInner = styled.div`
@@ -32,7 +32,7 @@ export const DetailContainerInner = styled.div`
 		column-gap: 1rem;
 		justify-content: center;
 		align-items: center;
-		margin-top: 2rem;
+		/* margin-top: 2rem; */
 		/* margin: 2rem; */
 
 		img {
