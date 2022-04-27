@@ -12,6 +12,13 @@ import {
 	writeBatch,
 } from 'firebase/firestore'
 import { useState } from 'react'
+import { DetailContainerInner } from '../styles/ItemDetail.styles'
+import {
+	CartContainer,
+	CartContainerProd,
+	OrdenStyle,
+} from '../styles/Cart.styles'
+import { Formulario } from './Formulario'
 
 export const Cart = () => {
 	const { cartList, removeCart, removeByItem, totalPrice } = useCartContext()
@@ -78,30 +85,37 @@ export const Cart = () => {
 	}
 
 	return (
-		<div>
+		<CartContainerProd>
+			{/* <div> */}
 			{cartList.map((item) => {
 				return (
-					<CartItem key={item.id} item={item} removeByItem={removeByItem} />
+					<CartContainer key={item.id}>
+						<div>
+							<CartItem item={item} removeByItem={removeByItem} />
+						</div>
+					</CartContainer>
 				)
 			})}
 
 			{cartList.length ? (
-				<div>
-					<button onClick={removeCart}>Vaciar Carrito</button>
+				<OrdenStyle>
 					<h3> Precio Total: {totalPrice}</h3>
-				</div>
+					<button onClick={removeCart}>Vaciar Carrito</button>
+					<div>
+						<button onClick={generarOrden}>Generar orden</button>
+						<h2>Su número de compra es el siguiente: {ordenID}</h2>
+						<Formulario />
+					</div>
+				</OrdenStyle>
 			) : (
 				<div>
 					<h3>No hay productos para mostrar</h3>
 					<Link to="/">
 						<button>Seguí comprando</button>
 					</Link>
-					<button onClick={generarOrden}>Generar orden</button>
 				</div>
 			)}
-
-			<button onClick={generarOrden}>Generar orden</button>
-			<h2>Su número de compra es el siguiente: {ordenID}</h2>
-		</div>
+			{/* </div> */}
+		</CartContainerProd>
 	)
 }
