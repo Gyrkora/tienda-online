@@ -104,7 +104,7 @@ export const Cart = () => {
 					<div>
 						<button onClick={generarOrden}>Generar orden</button>
 						<h2>Su número de compra es el siguiente: {ordenID}</h2>
-						<Formulario />
+						<Formulario ordenID={ordenID} />
 					</div>
 				</OrdenStyle>
 			) : (
