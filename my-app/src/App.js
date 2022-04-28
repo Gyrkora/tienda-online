@@ -1,7 +1,6 @@
 import './App.css'
 import './components/NavBar'
 import { NavBar } from './components/NavBar'
-import { Header } from './components/Header'
 import { GlobalStyles } from './global.style'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import DetailPage from './Pages/DetailPage'

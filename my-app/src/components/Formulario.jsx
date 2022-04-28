@@ -1,11 +1,17 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useState } from 'react'
+import {
+	FormularioCard,
+	InputContainer,
+	OrderFilled,
+} from '../styles/Formulario.styles'
 
 export const Formulario = () => {
-	const [sendFormulario, setSendFormulario] = useState(false)
+	const [valorNombre, setValorNombre] = useState(false)
+	const [valorEmail, setValorEmail] = useState(false)
 
 	return (
-		<>
+		<FormularioCard>
 			<Formik
 				initialValues={{
 					nombre: '',
@@ -33,16 +39,16 @@ export const Formulario = () => {
 
 					return errores
 				}}
-				onSubmit={(valores, { resetForm }) => {
+				onSubmit={(values, { resetForm }) => {
 					resetForm()
-					console.log('datos enviados')
-					setSendFormulario(true)
-					setTimeout(() => setSendFormulario(false), 5000)
+					setValorNombre(values.nombre)
+					setValorEmail(values.correo)
+					console.log(values.nombre)
 				}}
 			>
 				{({ errors }) => (
 					<Form>
-						<div>
+						<InputContainer>
 							<label htmlFor="nombre">Nombre</label>
 							<Field
 								type="text"
@@ -54,26 +60,27 @@ export const Formulario = () => {
 								name="nombre"
 								component={() => <div>{errors.nombre}</div>}
 							/>
-						</div>
-						<div>
+						</InputContainer>
+						<InputContainer>
 							<label htmlFor="correo">correo</label>
 							<Field type="text" id="correo" name="correo" placeholder="@" />
 							<ErrorMessage
 								name="correo"
 								component={() => <div>{errors.correo}</div>}
 							/>
-						</div>
-						<Field name="pais" as="select">
-							<option value="mexico">México</option>
-							<option value="Chile">Chile</option>
-							<option value="Argentina">Argentina</option>
-						</Field>
-						<div></div>
+						</InputContainer>
+
 						<button type="submit">Enviar</button>
-						{sendFormulario && <p>Formulario enviado con éxito</p>}
+
+						{
+							<OrderFilled>
+								<p>Nombre: {valorNombre}</p>
+								<p>Email: {valorEmail}</p>
+							</OrderFilled>
+						}
 					</Form>
 				)}
 			</Formik>
-		</>
+		</FormularioCard>
 	)
 }

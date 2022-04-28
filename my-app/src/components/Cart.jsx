@@ -12,20 +12,20 @@ import {
 	writeBatch,
 } from 'firebase/firestore'
 import { useState } from 'react'
-import { DetailContainerInner } from '../styles/ItemDetail.styles'
 import {
 	CartContainer,
 	CartContainerProd,
 	OrdenStyle,
 } from '../styles/Cart.styles'
 import { Formulario } from './Formulario'
+import { FormularioCard, OrderFilled } from '../styles/Formulario.styles'
 
 export const Cart = () => {
 	const { cartList, removeCart, removeByItem, totalPrice } = useCartContext()
 	const [ordenID, setOrdenID] = useState('')
 
-	const generarOrden = async (e) => {
-		e.preventDefault()
+	const generarOrden = async (event) => {
+		event.preventDefault()
 
 		let orden = {}
 
@@ -46,30 +46,23 @@ export const Cart = () => {
 		})
 
 		// # document creation
-		const db = getFirestore() //se consigue el storage
-		const queryCollection = collection(db, 'orders') //se crea la colección
-		await addDoc(queryCollection, orden) //agregar el archivo orden a orders //promise
-			.then(({ id }) => setOrdenID(id))
-
-			.finally(removeCart())
+		const db = getFirestore()
+		const queryCollection = collection(db, 'orders')
+		await addDoc(queryCollection, orden).then(({ id }) => setOrdenID(id))
 
 		//# actualizando el stock
-
 		const queryCollectionStock = collection(db, 'cursos')
-
 		const queryActulizarStock = await query(
 			queryCollectionStock,
-
 			where(
 				documentId(),
 				'in',
-				cartList.map((it) => it.id) // all los id's que estén... se va a crear un array = ["jlksjfdgl","asljdfks'] => ejemplo del map
+				cartList.map((it) => it.id)
 			)
 		)
 
-		const batch = writeBatch(db) //escritura por lote del firestore
-
-		await getDocs(queryActulizarStock) //se trae la array de los id's, es decir, traeme todos los id's de los productos que están en mi carrito
+		const batch = writeBatch(db)
+		await getDocs(queryActulizarStock)
 			.then((resp) =>
 				resp.docs.forEach((res) =>
 					batch.update(res.ref, {
@@ -86,7 +79,6 @@ export const Cart = () => {
 
 	return (
 		<CartContainerProd>
-			{/* <div> */}
 			{cartList.map((item) => {
 				return (
 					<CartContainer key={item.id}>
@@ -96,26 +88,37 @@ export const Cart = () => {
 					</CartContainer>
 				)
 			})}
-
 			{cartList.length ? (
 				<OrdenStyle>
 					<h3> Precio Total: {totalPrice}</h3>
-					<button onClick={removeCart}>Vaciar Carrito</button>
+
 					<div>
+						<Formulario ordenId={ordenID} />
+					</div>
+					<FormularioCard>
 						<button onClick={generarOrden}>Generar orden</button>
-						<h2>Su número de compra es el siguiente: {ordenID}</h2>
-						<Formulario ordenID={ordenID} />
+						<OrderFilled>
+							<p>Número de orden: {ordenID}</p>
+						</OrderFilled>
+					</FormularioCard>
+					<div>
+						<button onClick={removeCart}>Terminar la Compra</button>
+						<button onClick={removeCart}>Vaciar Carrito</button>
 					</div>
 				</OrdenStyle>
 			) : (
-				<div>
+				<OrdenStyle>
 					<h3>No hay productos para mostrar</h3>
 					<Link to="/">
 						<button>Seguí comprando</button>
 					</Link>
-				</div>
-			)}
-			{/* </div> */}
+					{ordenID && (
+						<div>
+							<p>Gracias por preferirnos!</p>
+						</div>
+					)}
+				</OrdenStyle>
+			)}{' '}
 		</CartContainerProd>
 	)
 }
