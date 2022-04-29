@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useState } from 'react'
+import { CartButton } from '../styles/Cart.styles'
 import {
 	FormularioCard,
 	InputContainer,
@@ -69,8 +70,19 @@ export const Formulario = () => {
 								component={() => <div>{errors.correo}</div>}
 							/>
 						</InputContainer>
+						<InputContainer>
+							<label htmlFor="formaPago" className="labelPago">
+								Método de pago
+							</label>
+							<br></br>
+							<Field name="formaPago" as="select">
+								<option value="Visa">Visa</option>
+								<option value="Débito">Débito</option>
+								<option value="PayPal">PayPal</option>
+							</Field>
+						</InputContainer>
 
-						<button type="submit">Enviar</button>
+						<CartButton type="submit">Enviar</CartButton>
 
 						{
 							<OrderFilled>

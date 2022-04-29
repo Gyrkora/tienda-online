@@ -13,9 +13,12 @@ import {
 } from 'firebase/firestore'
 import { useState } from 'react'
 import {
+	CartButton,
+	CartButtonOut,
 	CartContainer,
+	CartContainerGStyle,
 	CartContainerProd,
-	OrdenStyle,
+	OrderStyle,
 } from '../styles/Cart.styles'
 import { Formulario } from './Formulario'
 import { FormularioCard, OrderFilled } from '../styles/Formulario.styles'
@@ -78,47 +81,50 @@ export const Cart = () => {
 	}
 
 	return (
-		<CartContainerProd>
-			{cartList.map((item) => {
-				return (
-					<CartContainer key={item.id}>
-						<div>
-							<CartItem item={item} removeByItem={removeByItem} />
-						</div>
-					</CartContainer>
-				)
-			})}
-			{cartList.length ? (
-				<OrdenStyle>
-					<h3> Precio Total: {totalPrice}</h3>
+		<CartContainerGStyle>
+			<h1>Carrito</h1>
 
-					<div>
-						<Formulario ordenId={ordenID} />
-					</div>
-					<FormularioCard>
-						<button onClick={generarOrden}>Generar orden</button>
-						<OrderFilled>
-							<p>Número de orden: {ordenID}</p>
-						</OrderFilled>
-					</FormularioCard>
-					<div>
-						<button onClick={removeCart}>Terminar la Compra</button>
-						<button onClick={removeCart}>Vaciar Carrito</button>
-					</div>
-				</OrdenStyle>
-			) : (
-				<OrdenStyle>
-					<h3>No hay productos para mostrar</h3>
-					<Link to="/">
-						<button>Seguí comprando</button>
-					</Link>
-					{ordenID && (
+			<CartContainerProd>
+				{cartList.map((item) => {
+					return (
+						<CartContainer key={item.id}>
+							{/* <div> */}
+							<CartItem item={item} removeByItem={removeByItem} />
+							{/* </div> */}
+						</CartContainer>
+					)
+				})}
+				{cartList.length ? (
+					<OrderStyle>
 						<div>
-							<p>Gracias por preferirnos!</p>
+							<Formulario ordenId={ordenID} />
 						</div>
-					)}
-				</OrdenStyle>
-			)}{' '}
-		</CartContainerProd>
+						<FormularioCard>
+							<CartButton onClick={generarOrden}>Generar orden</CartButton>
+							<OrderFilled>
+								<p>Número de orden: {ordenID}</p>
+							</OrderFilled>
+						</FormularioCard>
+						<div>
+							<h3> Precio Total: {totalPrice} USD</h3>
+							<CartButtonOut onClick={removeCart}>Ir al Checkout</CartButtonOut>
+							{/* <CartButtonOut onClick={removeCart}>Vaciar Carrito</CartButtonOut> */}
+						</div>
+					</OrderStyle>
+				) : (
+					<OrderStyle>
+						<h3>No hay productos para mostrar</h3>
+						<Link to="/">
+							<button>Seguí comprando</button>
+						</Link>
+						{ordenID && (
+							<div>
+								<p>Gracias por preferirnos!</p>
+							</div>
+						)}
+					</OrderStyle>
+				)}{' '}
+			</CartContainerProd>
+		</CartContainerGStyle>
 	)
 }
