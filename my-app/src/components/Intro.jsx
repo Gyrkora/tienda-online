@@ -1,5 +1,9 @@
 import React from 'react'
-import { CirculoContainer, IntroContainer } from '../styles/Intro.styles'
+import {
+	CirculoContainer,
+	HeroContainer,
+	IntroContainer,
+} from '../styles/Intro.styles'
 import libros from '../assets/4.png'
 import lapiz from '../assets/555.png'
 
@@ -7,7 +11,7 @@ export const Intro = () => {
 	return (
 		<div>
 			{/* <h2>¿Estás buscando aprender español?</h2> */}
-			{/* <HeroContainer></HeroContainer> */}
+			<HeroContainer></HeroContainer>
 
 			<IntroContainer>
 				<CirculoContainer>
