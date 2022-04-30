@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-	CirculoContainer,
-	HeroContainer,
-	IntroContainer,
-} from '../styles/Intro.styles'
+import { CirculoContainer, IntroContainer } from '../styles/Intro.styles'
 import libros from '../assets/4.png'
 import lapiz from '../assets/555.png'
 

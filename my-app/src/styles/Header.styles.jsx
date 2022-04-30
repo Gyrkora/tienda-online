@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.div`
 	border: 1px solid gray;
 	position: relative;
-	/* margin-bottom: 4rem; */
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;

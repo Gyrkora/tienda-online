@@ -1,5 +1,4 @@
 import tow from '../tow.PNG'
-// import araucaria from '../assets/araucaria22.svg'
 import araucaria from '../assets/araucaria2.svg'
 import letras from '../assets/LetrasTOW.png'
 import blackBird from '../assets/blackBird.svg'
@@ -23,9 +22,7 @@ export const Header = () => {
 					<BirdContainer>
 						<img src={blackBird} alt="lapiz" />
 					</BirdContainer>
-					<TroncoLetrero>
-						{/* Aprende español conversando, escuchando podcasts, teniendo clases */}
-					</TroncoLetrero>
+					<TroncoLetrero></TroncoLetrero>
 				</TextHeader>
 
 				<img src={araucaria} className="App-logo" alt="logo" />
