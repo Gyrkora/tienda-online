@@ -4,10 +4,12 @@ export const GlobalStyles = createGlobalStyle`
 
 body{
     /* background-color: bisque; */
-    background-color: white;
+    /* background-color: white; */
+    background-color: #f2f2f28f;
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     cursor: url(tow), auto;	
 
@@ -28,3 +30,6 @@ html {
 
 
 `
+
+/* color: #ffd9d98f;
+	background-color: #e3a9a98f; */

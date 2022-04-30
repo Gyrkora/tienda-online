@@ -1,22 +1,15 @@
-/* .App {
-  text-align: center;
-  background-color: antiquewhite;
-} */
-
-.App-logo {
-	height: 70vmin;
-	pointer-events: none;
-}
 .App-logoFooter {
 	height: 15vmin;
 	pointer-events: none;
 }
 
 .App-logo {
+	height: 70vmin;
+	pointer-events: none;
 	/* padding-top: 2rem; */
-	animation-name: logo-animation;
+	/* animation-name: logo-animation;
 	animation-duration: 4s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: infinite; */
 }
 
 @keyframes logo-animation {
