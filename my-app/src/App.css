@@ -1,15 +1,15 @@
 .App-logoFooter {
 	height: 15vmin;
 	pointer-events: none;
+	/* padding-top: 2rem; */
+	animation-name: logo-animation;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
 }
 
 .App-logo {
 	height: 70vmin;
 	pointer-events: none;
-	/* padding-top: 2rem; */
-	/* animation-name: logo-animation;
-	animation-duration: 4s;
-	animation-iteration-count: infinite; */
 }
 
 @keyframes logo-animation {
@@ -18,7 +18,7 @@
 	}
 
 	50% {
-		transform: translateY(-20px);
+		transform: translateY(-5px);
 	}
 	100% {
 		transform: translateY(0px);

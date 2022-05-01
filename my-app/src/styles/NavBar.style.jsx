@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 export const NavbarContainer = styled.nav`
 	width: 100%;
 	height: ${(props) => (props.showNavbar ? '23rem' : '80px')};
-	background-color: tomato;
+	background-color: #bd1212;
 	display: flex;
 	flex-direction: column;
 	transition: all 0.7s ease-in-out;

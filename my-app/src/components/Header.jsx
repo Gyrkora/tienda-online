@@ -6,6 +6,7 @@ import {
 	BirdContainer,
 	HeaderContainer,
 	LetrasContainer,
+	LetreroContainer,
 	TextHeader,
 	TroncoLetrero,
 } from '../styles/Header.styles'
@@ -14,16 +15,18 @@ export const Header = () => {
 	return (
 		<div>
 			<HeaderContainer>
-				<TextHeader>
-					<h1>Tienda</h1>
-					<LetrasContainer>
-						<img src={letras} alt="letras" />
-					</LetrasContainer>
-					<BirdContainer>
-						<img src={blackBird} alt="lapiz" />
-					</BirdContainer>
-					<TroncoLetrero></TroncoLetrero>
-				</TextHeader>
+				<LetreroContainer>
+					<TextHeader>
+						<h1>Tienda</h1>
+						<LetrasContainer>
+							<img src={letras} alt="letras" />
+						</LetrasContainer>
+						<BirdContainer>
+							<img src={blackBird} alt="lapiz" />
+						</BirdContainer>
+						<TroncoLetrero></TroncoLetrero>
+					</TextHeader>
+				</LetreroContainer>
 
 				<img src={araucaria} className="App-logo" alt="logo" />
 			</HeaderContainer>

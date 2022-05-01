@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.div`
-	background-color: tomato;
+	background-color: #bd1212;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -10,6 +10,7 @@ export const FooterContainer = styled.div`
 	align-items: center;
 	gap: 1rem;
 	padding: 1rem 0;
+	color: white;
 
 	h4 {
 		color: white;
@@ -19,10 +20,6 @@ export const FooterContainer = styled.div`
 	i {
 		color: red;
 		font-size: 1.5rem;
-	}
-
-	li {
-		text-decoration: underline;
 	}
 
 	ul {
@@ -67,5 +64,6 @@ export const SocialMedia = styled.div`
 
 	.fa-whatsapp {
 		color: #032b26;
+		padding: 0 !important;
 	}
 `

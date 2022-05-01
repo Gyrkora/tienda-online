@@ -1,15 +1,19 @@
 import styled from 'styled-components'
 
 export const ButtonStyled = styled.button`
-	margin: 0.7rem 0 1rem 0;
-	padding: 1rem 2rem;
-	background-color: bisque;
-	color: black;
+	margin: 0 0 1rem 0;
+	padding: 0.5rem 1rem;
+	color: white;
+	background-color: #bd1212;
 	cursor: pointer;
-	border: none;
 	border-radius: 1rem;
-	/* background-color: bisque; */
-	/* border: #fc7159 solid 3px; */
+	border: none;
+	font-size: 1rem;
+	transition: all 0.5s ease-in-out;
+
+	&:hover {
+		padding: 0.5rem 6rem;
+	}
 `
 
 export const ButtonSwitchedContain = styled.div`

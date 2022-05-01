@@ -1,16 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const CartWidgetDisabled = styled.div`
-    
-    color: #a44d27d7;
-
+	color: #a44d27d7;
 `
 export const CartWidgetAbled = styled.div`
-    
-    color: #086516;
+	color: black;
 
-    a {
-        text-decoration: none;
-    }
-
+	a {
+		text-decoration: none;
+	}
 `

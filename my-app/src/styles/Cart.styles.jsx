@@ -140,17 +140,20 @@ export const CartButton = styled.button`
 	padding: 0.7rem 2rem;
 	margin: 1rem 0 0.5rem 0;
 	border: none;
-	background-color: #ff7961;
+	background-color: #bd9c26;
 	color: white;
 	border-radius: 10px;
 	cursor: pointer;
 	transition: all 0.5s ease-in-out;
 
 	&:hover {
-		background-color: #b33620;
+		background-color: #bd1212;
 		padding: 0.7rem 4rem;
 	}
 `
+
+//
+//ff7961 LINDO
 
 export const CartButtonOut = styled.button`
 	padding: 1rem 2rem;
