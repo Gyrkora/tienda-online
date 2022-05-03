@@ -24,5 +24,3 @@ export const HomePage = () => {
 		</HomePageContainer>
 	)
 }
-
-/* className="App-header" */

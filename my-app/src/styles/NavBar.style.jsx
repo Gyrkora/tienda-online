@@ -8,7 +8,6 @@ export const NavbarContainer = styled.nav`
 	display: flex;
 	flex-direction: column;
 	transition: all 0.7s ease-in-out;
-	/* margin-bottom: 1rem; */
 
 	@media (min-width: 700px) {
 		height: 80px;
@@ -65,9 +64,7 @@ export const Logo = styled.div`
 	margin: 10px;
 	font-size: 2.5rem;
 	font-weight: bold;
-	/* color: bisque; */
 	color: #70151b;
-	/* color: #b1212b; */
 `
 
 export const OpenLinksButton = styled.button`
@@ -93,8 +90,3 @@ export const NavbarExtendedContainer = styled.div`
 		display: none;
 	}
 `
-
-/* https://www.youtube.com/watch?v=1yMrdBsep-A&ab_channel=PedroTech 
-
-https://github.com/machadop1407/styled-components-responsive-navbar
-*/

@@ -44,3 +44,10 @@ export const OrderFilled = styled.div`
 	flex-direction: column;
 	align-items: start;
 `
+
+export const FormAlarm = styled.div`
+	color: #03b36d;
+
+	font-weight: bold;
+	margin-bottom: 1rem;
+`

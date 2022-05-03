@@ -9,6 +9,18 @@ export const CartContainerGStyle = styled.div`
 	}
 
 	margin: 0;
+
+	span {
+		color: #bd1212;
+	}
+`
+
+export const NoCartItems = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
 `
 
 export const CartContainerProd = styled.div`
@@ -63,8 +75,8 @@ export const CardContainer = styled.div`
 
 export const CartItemContainer = styled.div`
 	background-color: white;
-	display: grid;
-	grid-template-columns: 50% 50%;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin: 1rem 0;
@@ -72,14 +84,9 @@ export const CartItemContainer = styled.div`
 	padding: 1rem;
 	-webkit-box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.57);
 	box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.57);
-	/* max-width: 30rem; */
-	max-width: 99%;
+	max-width: 70%;
 	i {
-		position: absolute;
-		top: -7%;
-		right: 0;
 		font-size: 1.5rem;
-		cursor: pointer;
 	}
 
 	img {
@@ -92,15 +99,18 @@ export const CartItemContainer = styled.div`
 	@media (min-width: 768px) {
 		width: 60rem;
 		max-width: 95%;
+		display: grid;
+		grid-template-columns: 50% 50%;
 
 		i {
-			top: -35%;
+			position: absolute;
+			top: -25%;
+			right: 0;
+			cursor: pointer;
 		}
 	}
 
 	@media (min-width: 1024px) {
-		/* width: 60rem; */
-		max-width: 95%;
 		display: grid;
 		grid-template-columns: 40% 60%;
 		padding: 1rem;
@@ -110,12 +120,18 @@ export const CartItemContainer = styled.div`
 		justify-content: center;
 		align-items: center;
 		max-width: 99%;
-		/* width: 100rem; */
 
 		img {
 			width: 30vmin;
 			height: 30vmin;
 			padding: 0.5rem;
+		}
+
+		i {
+			position: absolute;
+			top: -100%;
+			right: 0;
+			cursor: pointer;
 		}
 	}
 `
@@ -129,11 +145,18 @@ export const OrderStyle = styled.div`
 `
 
 export const DescriptionCartItem = styled.div`
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	position: relative;
+
+	@media (min-width: 1300px) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		justify-content: center;
+	}
 `
 
 export const CartButton = styled.button`
@@ -152,22 +175,16 @@ export const CartButton = styled.button`
 	}
 `
 
-//
-//ff7961 LINDO
-
-export const CartButtonOut = styled.button`
+export const CartButtonOut = styled(CartButton)`
 	padding: 1rem 2rem;
 	font-size: 1.1rem;
 	margin: 0.5rem;
-	border: none;
 	background-color: #0eb36d;
-	color: white;
-	border-radius: 10px;
 	cursor: pointer;
-	transition: all 0.5s ease-in-out;
 
 	&:hover {
 		background-color: #0e8553;
 		transform: scale(1.2);
+		padding: 1rem 2rem;
 	}
 `

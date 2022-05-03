@@ -26,13 +26,10 @@ export const NavBar = () => {
 							<NavbarLink to="/">Inicio</NavbarLink>
 							<NavbarLink to="/categoria/Cursos">Cursos</NavbarLink>
 							<NavbarLink to="/categoria/Audiolibros">Audiolibros</NavbarLink>
-							{/* <NavbarLink to="/categoria/Libros">Libros</NavbarLink> */}
-							{/* <NavbarLink to="/categoria/Arte">Arte</NavbarLink> */}
+
 							<OpenLinksButton
 								onClick={() => {
-									setShowNavbar(
-										(current) => !current
-									) /* el estado se vuelve verdadero */
+									setShowNavbar((current) => !current)
 								}}
 							>
 								{showNavbar ? <>&#10005;</> : <>&#8801;</>}
@@ -53,8 +50,6 @@ export const NavBar = () => {
 						<NavbarRLink to="/">Inicio</NavbarRLink>
 						<NavbarRLink to="/categoria/Cursos">Cursos</NavbarRLink>
 						<NavbarRLink to="/categoria/Audiolibros">Audiolibros</NavbarRLink>
-						{/* <NavbarRLink to="/Libros">Libros</NavbarRLink> */}
-						{/* <NavbarRLink to="/Arte">Arte</NavbarRLink> */}
 					</NavbarExtendedContainer>
 				)}
 			</NavbarContainer>

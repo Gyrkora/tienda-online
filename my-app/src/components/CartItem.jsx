@@ -17,15 +17,23 @@ export const CartItem = ({ item, removeByItem }) => {
 
 				<DescriptionCartItem>
 					<div>
-						<h3> Título: {item.courseName} </h3>
-						<h3> Categoría: {item.category}</h3>
+						<h3>
+							<span>Título:</span> {item.courseName}{' '}
+						</h3>
+						<h3>
+							<span>Categoría:</span> {item.category}
+						</h3>
 					</div>
 
 					<div>
-						<h3> Precio: {item.amount * item.priceInDollars + ' USD'}</h3>
-					</div>
-					<div>
-						<h3> Cantidad: {item.amount} </h3>
+						<div>
+							<h3>
+								<span>Cantidad:</span> {item.amount}
+							</h3>
+						</div>
+						<h3>
+							<span>Precio:</span> {item.amount * item.priceInDollars + ' USD'}
+						</h3>
 					</div>
 
 					<i

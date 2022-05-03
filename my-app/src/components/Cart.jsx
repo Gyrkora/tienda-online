@@ -18,10 +18,15 @@ import {
 	CartContainer,
 	CartContainerGStyle,
 	CartContainerProd,
+	NoCartItems,
 	OrderStyle,
 } from '../styles/Cart.styles'
 import { Formulario } from './Formulario'
-import { FormularioCard, OrderFilled } from '../styles/Formulario.styles'
+import {
+	FormAlarm,
+	FormularioCard,
+	OrderFilled,
+} from '../styles/Formulario.styles'
 
 export const Cart = () => {
 	const { cartList, removeCart, removeByItem, totalPrice } = useCartContext()
@@ -84,13 +89,25 @@ export const Cart = () => {
 		<CartContainerGStyle>
 			<h1>Carrito</h1>
 
+			{cartList.length === 0 && (
+				<NoCartItems>
+					<h3>No hay productos para mostrar</h3>
+					<Link to="/">
+						<button>Seguí comprando</button>
+					</Link>
+					{ordenID && (
+						<FormAlarm>
+							<p>Gracias por preferirnos!</p>
+						</FormAlarm>
+					)}
+				</NoCartItems>
+			)}
+
 			<CartContainerProd>
 				{cartList.map((item) => {
 					return (
 						<CartContainer key={item.id}>
-							{/* <div> */}
 							<CartItem item={item} removeByItem={removeByItem} />
-							{/* </div> */}
 						</CartContainer>
 					)
 				})}
@@ -108,22 +125,11 @@ export const Cart = () => {
 						<div>
 							<h3> Precio Total: {totalPrice} USD</h3>
 							<CartButtonOut onClick={removeCart}>Ir al Checkout</CartButtonOut>
-							{/* <CartButtonOut onClick={removeCart}>Vaciar Carrito</CartButtonOut> */}
 						</div>
 					</OrderStyle>
 				) : (
-					<OrderStyle>
-						<h3>No hay productos para mostrar</h3>
-						<Link to="/">
-							<button>Seguí comprando</button>
-						</Link>
-						{ordenID && (
-							<div>
-								<p>Gracias por preferirnos!</p>
-							</div>
-						)}
-					</OrderStyle>
-				)}{' '}
+					<div></div>
+				)}
 			</CartContainerProd>
 		</CartContainerGStyle>
 	)

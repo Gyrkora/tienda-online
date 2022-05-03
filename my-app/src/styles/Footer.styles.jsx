@@ -5,7 +5,6 @@ export const FooterContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	/* min-height: 100vh; */
 
 	align-items: center;
 	gap: 1rem;
@@ -48,6 +47,7 @@ export const SocialMedia = styled.div`
 	i {
 		font-size: 1.5rem;
 		padding: 0 1rem;
+		cursor: pointer;
 	}
 
 	.fa-facebook {

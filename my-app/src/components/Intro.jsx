@@ -8,7 +8,6 @@ import {
 import tow from '../tow.PNG'
 import libros from '../assets/4.png'
 import lapiz from '../assets/555.png'
-import clubesBanner from '../assets/clubesBanner.png'
 import letras from '../assets/LetrasTOW.png'
 
 export const Intro = () => {

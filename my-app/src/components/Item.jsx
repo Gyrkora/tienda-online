@@ -1,7 +1,5 @@
-/* Acá se creará la estructura del map y se importará ItemCount */
-
 import { Link } from 'react-router-dom'
-import { ButtonStyled } from '../styles/Button.styles'
+import { ButtonOriginal } from '../styles/Button.styles'
 
 export const Item = ({ courseName, price, photo, id, stock }) => {
 	return (
@@ -13,7 +11,11 @@ export const Item = ({ courseName, price, photo, id, stock }) => {
 			<h4>{price}</h4>
 
 			<Link to={`/detalle/${id}`}>
-				<ButtonStyled>Ver más</ButtonStyled>
+				<ButtonOriginal
+					bgColor={'#bd1212'}
+					pX={'2rem'}
+					label={'ver más'}
+				></ButtonOriginal>
 			</Link>
 		</div>
 	)

@@ -6,12 +6,9 @@ const DetailPage = () => {
 	let { detalleId } = useParams()
 
 	return (
-		// <DetailContainer>
 		<div>
-			{/* <h1> Detalle </h1> */}
 			<ItemDetailContainer id={detalleId} />
 		</div>
-		// </DetailContainer>
 	)
 }
 

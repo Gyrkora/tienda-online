@@ -44,15 +44,11 @@ export const Footer = () => {
 				<h4>Síguenos en:</h4>
 				<div>
 					<SocialMedia>
-						<a href="#">
-							<i className="fab fa-instagram"></i>
-						</a>
-						<a href="#">
-							<i className="fab fa-facebook"></i>
-						</a>
-						<a href="#">
-							<i className="fab fa-youtube"></i>
-						</a>
+						<i className="fab fa-instagram"></i>
+
+						<i className="fab fa-facebook"></i>
+
+						<i className="fab fa-youtube"></i>
 					</SocialMedia>
 				</div>
 			</div>

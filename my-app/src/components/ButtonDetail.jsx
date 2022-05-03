@@ -1,23 +1,27 @@
-import { ButtonStyled, ButtonSwitchedContain } from '../styles/Button.styles'
+import { ButtonOriginal, ButtonSwitchedContain } from '../styles/Button.styles'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const ButtonSwitched = () => {
 	return (
 		<ButtonSwitchedContain>
-			{/* <div> */}
 			<Link to="/cart">
-				<ButtonStyled onClick={() => console.log('ir a cart')}>
-					Terminar compra
-				</ButtonStyled>
+				<ButtonOriginal
+					bgColor={'#bd9c26'}
+					pX={'2rem'}
+					label={'Ir al carrito 🛒'}
+					onClick={() => console.log('ir a cart')}
+				></ButtonOriginal>
 			</Link>
 
 			<Link to="/">
-				<ButtonStyled onclick={() => console.log('ir a home')}>
-					Seguir comprando
-				</ButtonStyled>
+				<ButtonOriginal
+					bgColor={'#bd1212'}
+					pX={'2rem'}
+					label={'Seguir comprando'}
+					onClick={() => console.log('ir a home')}
+				></ButtonOriginal>
 			</Link>
-			{/* </div> */}
 		</ButtonSwitchedContain>
 	)
 }
@@ -33,9 +37,13 @@ const ButtonDetail = ({ noMore, onAdd, count }) => {
 	return (
 		<div>
 			{ButtonType ? (
-				<ButtonStyled onClick={handleInter} disabled={noMore}>
-					Agregar al Carrito
-				</ButtonStyled>
+				<ButtonOriginal
+					bgColor={'#bd1212'}
+					pX={'2rem'}
+					label={'Agregar'}
+					onClick={handleInter}
+					disabled={noMore}
+				></ButtonOriginal>
 			) : (
 				<ButtonSwitched disabled={noMore} />
 			)}
@@ -44,9 +52,3 @@ const ButtonDetail = ({ noMore, onAdd, count }) => {
 }
 
 export default ButtonDetail
-
-// {ButtonType ?
-//   <ButtonStyled onClick={handleInter} disabled={noMore}>Agregar al Carrito</ButtonStyled>
-//  : (
-//   <ButtonSwitched disabled={noMore} />
-// )}

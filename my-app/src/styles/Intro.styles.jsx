@@ -72,14 +72,6 @@ export const HeroContainer = styled.div`
 `
 
 export const LetrasIntroContainer = styled.div`
-	/* 
-@media (min-width: 1300px) {
-
-	display: grid;
-	grid-template-columns: ;
-
-} */
-
 	padding: 0 !important;
 
 	@media (max-width: 1024px) {

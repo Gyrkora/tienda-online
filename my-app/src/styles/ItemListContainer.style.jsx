@@ -23,8 +23,8 @@ export const ItemSContainer = styled.div`
 	}
 
 	img {
-		height: 15rem;
-		width: 17rem;
+		height: 11rem;
+		width: 13rem;
 		padding: 0.5rem;
 	}
 `

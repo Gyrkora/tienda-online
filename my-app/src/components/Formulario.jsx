@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useState } from 'react'
 import { CartButton } from '../styles/Cart.styles'
 import {
+	FormAlarm,
 	FormularioCard,
 	InputContainer,
 	OrderFilled,
@@ -59,7 +60,7 @@ export const Formulario = () => {
 							/>
 							<ErrorMessage
 								name="nombre"
-								component={() => <div>{errors.nombre}</div>}
+								component={() => <FormAlarm>{errors.nombre}</FormAlarm>}
 							/>
 						</InputContainer>
 						<InputContainer>
@@ -67,7 +68,7 @@ export const Formulario = () => {
 							<Field type="text" id="correo" name="correo" placeholder="@" />
 							<ErrorMessage
 								name="correo"
-								component={() => <div>{errors.correo}</div>}
+								component={() => <FormAlarm>{errors.correo}</FormAlarm>}
 							/>
 						</InputContainer>
 						<InputContainer>
