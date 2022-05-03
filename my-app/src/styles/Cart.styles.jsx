@@ -84,7 +84,8 @@ export const CartItemContainer = styled.div`
 	padding: 1rem;
 	-webkit-box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.57);
 	box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.57);
-	max-width: 70%;
+	width: 30rem;
+	max-width: 80%;
 	i {
 		font-size: 1.5rem;
 	}
